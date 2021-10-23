@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Italianno', cursive;
+
+}
+html {
+    color: #dd1818;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
+}
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+html::-webkit-scrollbar-track {
+    background-color: #000;
+}
+html::-webkit-scrollbar-thumb {
+    background: #441a1a;
+    border-radius: 5rem;
+}
+.container{
+    max-width: 70rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-image: url(./img/pic\ \(1\).jpg);
+    background-size: cover;
+
+}
+header::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 0, 0, 0.05);
+    z-index: 25;
+}
+.img1{
+    bottom: -100px;
+    left: -70px;
+    z-index: 20;
+} 
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 30;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent);
+}
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .menu{
+    display: flex;
+    margin: -12% -3% -2% 500%;
+}
+.logo {
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.logo span{
+    font-weight: 300;
+}
+.menu{
+    width: 1.55rem;
+    height: 1.5rem;
+
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.bar{
+    position: relative;
+    width: 1.2rem;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+.logo-title{
+    position: absolute;
+    z-index: 30;
+    line-height: 4rem;
+    top: calc(50% - 2rem);
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 600;
+    color: #fff;
+
+}
+section{
+    width: 100%;
+    background: #333333;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #441a1a, #292929); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: relative;
+}
+section .container{
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+section .container > * {
+    margin: 5rem;
+}
+section img{
+    width: 130%;
+}
+.content{
+    color: #fff;
+}
+.title{
+    letter-spacing: 5px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    position: relative;
+    text-align: end;
+}
+.text{
+    text-align: end;
+    font-size: 25px;
+}
+.border{
+    position: absolute;
+    width: 30%;
+    height: 3px;
+    background: #fff;
+    bottom: 0;
+    left: 0;
+    text-align: end;
+
+}
+.border-2{
+    position: absolute;
+    width: 20%;
+    height: 3px;
+    background: #fff;
+    text-align: end;
+}
+section h1{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 4rem;
+    color: #dd1818;
+    text-align: center;
+}
+
+.shadow {
+    position: absolute;
+    bottom: 100%;
+    height: 300px;
+    width: 100%;
+    left: 0;
+    z-index: 20;
+    background: linear-gradient(to top, #441a1a, #292929, transparent);
+}
+@media (max-width:850px){
+    section .container{
+        grid-template-columns: 1fr;
+    }
+
+}
+@media (max-width:600px){
+    section h1{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    section img{
+        width: 100%;
+    }
+    .title{
+        font-size: 3rem;
+        text-align: center;
+    }
+    .text{
+        font-size: 25px;
+    text-align: center;
+    }
+    .shadow {
+        position: absolute;
+        bottom: 100%;
+        height: 400px;
+        width: 100%;
+        left: 0;
+        z-index: 20;
+        background: linear-gradient(to top, #441a1a, #292929, transparent);
+    }
+    .border {
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        bottom: 0;
+        left: 0;
+        text-align: end;
+    }
+    .border-2{
+    position: absolute;
+    width: 108%;
+    height: 3px;
+    background: #fff;
+    text-align: end;
+    }
+    
+    section .container > *{
+    margin: 13% -19%;
+    }
+}
